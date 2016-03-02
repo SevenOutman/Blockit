@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Block It</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body class="onload">
+<div class="container">
+    <div class="game-container">
+        <div class="game-tip">
+            Tap to start
+        </div>
+        <div class="game-message">
+            <h1>Game Over</h1>
+            <p>
+                <span class="label">Score</span>
+                <span class="numeric" id="score">0</span>
+            </p>
+            <p>
+                <span class="label">Best</span>
+                <span class="numeric" id="best">0</span>
+            </p>
+            <a class="btn-restart">Try again</a>
+        </div>
+        <div class="game-score">0</div>
+        <div class="playground">
+            <div class="blockbar"></div>
+        </div>
+        <div class="ball">
+            <div class="ball-inner"></div>
+        </div>
+    </div>
+    <div class="game-explanation">
+        <span class="fps">FPS: 0</span>
+        <p>Tap to block the ball.</p>
+    </div>
+</div>
+<script src="js/animframe_polyfill.js"></script>
+<script src="js/bind_polyfill.js"></script>
+<script src="js/classlist_polyfill.js"></script>
+<script src="js/InputManager.js"></script>
+<script src="js/Renderer.js"></script>
+<script src="js/Game.js"></script>
+<!--<script src="js/blockit.polyfill.js"></script>-->
+<!--<script src="js/blockit.app.js"></script>-->
+<script>
+    requestAnimationFrame(function () {
+        window.game = new Game();
+    });
+</script>
+</body>
+</html>
